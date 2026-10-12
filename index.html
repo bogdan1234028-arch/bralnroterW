@@ -2,24 +2,23 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BrainroterW</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#10131d;color:white;text-align:center}
-header{padding:22px 12px;background:#1b2030;border-bottom:2px solid #7d4dff}
-h1{color:#ffd43b;font-size:30px;text-shadow:0 0 14px #ff8c00;margin:8px}
-p{color:#c6c9d5}
-main{max-width:850px;margin:auto;padding:18px}
-.banner{padding:25px 12px;background:linear-gradient(135deg,#4425a8,#e04483);border-radius:18px;margin:12px 0}
+body{margin:0;background:#10111d;color:white;font-family:Arial,sans-serif;text-align:center}
+header{padding:20px;background:#20233a;border-bottom:3px solid #a855f7}
+h1{color:#ffd43b;font-size:30px;margin:5px}
+main{max-width:800px;margin:auto;padding:18px}
+.banner{background:linear-gradient(135deg,#5927bd,#e04483);padding:25px 10px;border-radius:18px}
 h2{margin-top:0}
-.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.card{background:#22283a;border:1px solid #424c67;border-radius:15px;padding:20px 8px}
-.emoji{font-size:43px}
-button{border:0;border-radius:10px;padding:12px 18px;background:#ffd43b;color:#171717;font-weight:bold;cursor:pointer;margin:5px}
-button:active{transform:scale(.97)}
-#notice{color:#ffd43b;min-height:24px}
-footer{padding:25px;color:#9299ac}
+button{background:#ffd43b;color:#191919;border:0;border-radius:12px;padding:13px 20px;font-size:16px;font-weight:bold;cursor:pointer;margin:6px}
+button:hover{background:#ffec83}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+.card{background:#232740;border:1px solid #484d70;border-radius:16px;padding:18px 5px}
+.emoji{font-size:42px}
+#notice{margin:20px 0;color:#ffd43b;font-size:18px;min-height:28px}
+footer{padding:20px;color:#aaa}
 </style>
 </head>
 <body>
@@ -30,21 +29,21 @@ footer{padding:25px;color:#9299ac}
 <main>
 <section class="banner">
 <h2>⚔️ BRAINROT BATTLE ⚔️</h2>
-<p>Choose your next move!</p>
-<button onclick="show('Welcome to BrainroterW!')">PLAY</button>
+<p>Ready to enter the battle?</p>
+<button onclick="showPage('Welcome to BrainroterW! Choose a section below.')">PLAY</button>
 </section>
-<h2>🎮 GAME MENU</h2>
+<h2 style="margin-top:28px">🎮 GAME MENU</h2>
 <div class="cards">
-<div class="card"><div class="emoji">🧠</div><h3>Brainrots</h3><button onclick="show('Brainrots section coming soon!')">OPEN</button></div>
-<div class="card"><div class="emoji">⚔️</div><h3>Battles</h3><button onclick="show('Battles section coming soon!')">OPEN</button></div>
-<div class="card"><div class="emoji">🏆</div><h3>Leaderboard</h3><button onclick="show('Leaderboard coming soon!')">OPEN</button></div>
-<div class="card"><div class="emoji">👤</div><h3>Profile</h3><button onclick="show('Your profile will appear here!')">OPEN</button></div>
+<div class="card"><div class="emoji">🧠</div><h3>Brainrots</h3><button onclick="showPage('Brainrots section coming soon!')">OPEN</button></div>
+<div class="card"><div class="emoji">⚔️</div><h3>Battles</h3><button onclick="showPage('Battles section coming soon!')">OPEN</button></div>
+<div class="card"><div class="emoji">🏆</div><h3>Leaderboard</h3><button onclick="showPage('Leaderboard coming soon!')">OPEN</button></div>
+<div class="card"><div class="emoji">👤</div><h3>Profile</h3><button onclick="showPage('Profile coming soon!')">OPEN</button></div>
 </div>
-<p id="notice"></p>
+<div id="notice">Choose PLAY to begin!</div>
 </main>
 <footer>BrainroterW • Fan-made demo</footer>
 <script>
-function show(message){
+function showPage(message){
 document.getElementById('notice').textContent=message;
 }
 </script>
